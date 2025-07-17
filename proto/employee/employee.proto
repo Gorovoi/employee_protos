@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package employee;
+
+option go_package = "gorovoi.employee.v1;employeev1";
+
+service Employee {
+  rpc AddEmployee (AddEmployeeRequest) returns (AddEmployeeResponse);
+  rpc ChangeEmployee (ChangeEmployeeRequest) returns (ChangeEmployeeResponse);
+}
+
+message AddEmployeeRequest {
+  string name = 1;
+  int64 salary = 2;
+}
+
+message AddEmployeeResponse {
+  int64 id = 1;
+}
+
+message ChangeEmployeeRequest {
+  int64 id = 1;
+  int64 salary = 2;
+}
+
+message ChangeEmployeeResponse {
+  bool success = 1;
+}

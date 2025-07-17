@@ -1,4 +1,4 @@
-module github.com/Gorovoi/employee
+module github.com/Gorovoi/employee_protos
 
 go 1.24
 
